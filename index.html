@@ -2,12 +2,28 @@
 <html>
 <head>
     <title>The AJAXson 5</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <title>Bootstrap Tutorial</title>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="request-gif.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <style>
+
+        .image-box{
+            padding-bottom: 25px;
+        }
+
+    </style>
+
 </head>
 <body>
-    <h1>AJAXson 5</h1>
+    <div class="container">
+     <div class="page-header">
+        <h1>AJAXson 5</h1>
+    </div>
+
+    <div class="jumbotron">
 
     <form id="form-gif-request" />
         <label>What kind of Jackson 5 related gif do you want?</label>
@@ -15,11 +31,22 @@
         <label>Prove you are not a robot by solving this riddle:</label><br></br>
         <input name="captcha" type="text"/>
         <label>Jacksons are beter than 1</label><br></br>
+        <p id="fail" hidden="true"></p><br></br>
         <input type="submit" value="Get my Gif!" />
     </form>
 
-    <img id="gif" src="" hidden="true"/>
-    <p id="feedback" hidden="true`"></p>
+</div>
+
+    <div class="image-box">
+
+     <p id="loading" hiden="true"></p>
+     <img class="responsive" id="gif" src="" hidden="true"/>
+     <p id="feedback" hidden="true`"></p><br></br>
+
+
+    </div>
+
+</div>
 
 </body>
 </html>
